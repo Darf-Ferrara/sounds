@@ -1,0 +1,102 @@
+Securing underwater wireless communication networks
+Mari Carmen Domingo, Barcelona Tech University
+IEEE Wireless Communications, Volume 18, Issue 1
+
+
+Paper addresses comm security between UUV and sensor network
+
+Channel is difficult,
+1) Long Delays
+2) Multipath fading
+3) doppler. 
+4) Error rates are high, 
+5) losses of connectivity arise.
+6) Power requirements are more stringent (everything is battery operated).
+
+Adversarial problems
+1)Packet errors (due to natural channel effects as well as jamming)
+2)Eavesdropping
+3)Modification of packet
+4)Malicious nodes create wormhole effects ( talking via EM channel above the surface)
+5)Energy exhaust attacks to drain batteries.
+
+
+
+Denial of Service (DOS) attacks and their mitigation
+1)Jamming
+	-Use spread spectrum techniques
+	-FHSS, DSSS
+
+2)Wormhole attack
+ 	In a wormhole attack the
+malicious node transfers some selected packets
+received at one end of the wormhole to the
+other end using the out-of-band connection, and
+re-injects them into the network [4].
+
+	-Use Cognitive radio methods to determine physical separation between actual communication nodes
+
+3)Sinkhole attack
+	Malicious node announces a nice direction
+
+4)Others
+  HELLO Flood attack
+  ACK Spoofing
+  Selective Forwarding
+  Sybil Attack (pretend to be in many places at once
+
+
+Security reqts
+
+1) Authentication
+	-key generation and update must be updated must be updated to address channel
+2) Confidentiality
+	-Unauthorized third parties cannot access information
+3) Integrity
+	-Data sent by nodes must be reliable
+4) Availablity
+	-Data should be available when needed. Example given: data for seaquakes
+
+Research challenges
+
+1) Secure Time Synchronization
+	-Tri-Message is a time synchronization protocol designed for high latency networks
+
+The following open research issues for secure
+time synchronization need to be addressed:
+• Because of the high and variable propagation
+delays of UWCNs, the time required to synchronize
+nodes should be investigated.
+• Efficient and secure time synchronization
+
+2) Secure Routing
+
+
+•There is a need to develop reputation-based
+schemes that analyze the behavior of neighbors
+and reject routing paths containing selfish nodes
+that do not cooperate in routing. The proper
+functioning of these schemes is challenging
+because they do not work well in mobile environments,
+the time required to detect compromised
+nodes increases substantially in UWCNs due to
+the long propagation delays, and they must be
+adapted to tolerate short-term disruptions.
+•Quick and powerful encryption and authentication
+mechanisms against outside intruders
+should be devised for UWCNs because the time
+required for intruder detection is high due to the
+long and variable propagation delays, and routing
+paths containing undetected malicious nodes
+can be selected in the meantime for packet forwarding.
+•Sophisticated mechanisms should be developed
+against insider attacks such as selective forwarding,
+Sybil attacks, HELLO flood attacks,
+and acknowledgment spoofing.
+•There is a need to develop new techniques
+against sinkholes and wormholes, and improve
+existing ones. With Dis-VoW [2] a wormhole
+attack can still be concealed by manipulating the
+buffering times of distance estimation packets.
+The wormhole-resilient neighbor discovery in [5]
+is affected by the orientation error between sensors
