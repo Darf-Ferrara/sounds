@@ -64,15 +64,15 @@ Research challenges
 
 The following open research issues for secure
 time synchronization need to be addressed:
-• Because of the high and variable propagation
+â€¢ Because of the high and variable propagation
 delays of UWCNs, the time required to synchronize
 nodes should be investigated.
-• Efficient and secure time synchronization
+â€¢ Efficient and secure time synchronization
 
 2) Secure Routing
 
 
-•There is a need to develop reputation-based
+â€¢There is a need to develop reputation-based
 schemes that analyze the behavior of neighbors
 and reject routing paths containing selfish nodes
 that do not cooperate in routing. The proper
@@ -82,21 +82,48 @@ the time required to detect compromised
 nodes increases substantially in UWCNs due to
 the long propagation delays, and they must be
 adapted to tolerate short-term disruptions.
-•Quick and powerful encryption and authentication
+â€¢Quick and powerful encryption and authentication
 mechanisms against outside intruders
 should be devised for UWCNs because the time
 required for intruder detection is high due to the
 long and variable propagation delays, and routing
 paths containing undetected malicious nodes
 can be selected in the meantime for packet forwarding.
-•Sophisticated mechanisms should be developed
+â€¢Sophisticated mechanisms should be developed
 against insider attacks such as selective forwarding,
 Sybil attacks, HELLO flood attacks,
 and acknowledgment spoofing.
-•There is a need to develop new techniques
+â€¢There is a need to develop new techniques
 against sinkholes and wormholes, and improve
 existing ones. With Dis-VoW [2] a wormhole
 attack can still be concealed by manipulating the
 buffering times of distance estimation packets.
 The wormhole-resilient neighbor discovery in [5]
 is affected by the orientation error between sensors
+
+
+A Survey of Practical Issues in Underwater Networks
+Jim Partan1, Jim Kurose, Brian Neil Levine
+
+Paper focuses on the MAC layer (Media Access Control)
+
+MAC protocol is still an open problem. The network topology will likely remain sparse due to the bigness of the ocean and cost of sensors.
+
+Transmit power dominates (by a factor of 100 sometimes)
+
+Radio waves can be used for short distances (122kHz  for 6-10 m transmitting 1-8kbits/sec)
+Optical can get 1-2m at 57.6 kbits/sec
+
+20dB/m pathloss can happen for near-surface with bubble clouds
+
+time delays can be estimated
+
+transducers are frequently used for both send and recieve, but can't do both at once. 
+
+Small AUVs can transmit at high data rates, but have difficulty recieving at high data rates. high data rate is 5kbits/sec at 2km, low data rate is 80 b/sec
+
+higher data rates might use PSK, with equalization and arrays of recievers for diversity. FDMA is occasionally used, Seaweb used hybrid TDMA-CDMA clusters with MACA(Multiple access with Collision Avoidance) style RTS/CTS/DATA handshakes
+
+Collision detection is challenging with half duplex channel.
+
+CDMA can work well if the network is approximately equally balanced powerwise. This has difficulties if there is a near-far problem
